@@ -1,0 +1,7 @@
+<h4>Consolidated Statements of Cash Flows compiled {{ report.created_at }}:</h4>
+<ul>
+    {% for s in statements %}
+        {% url 'detail' pk=report.pk ticker_symbol=s.ticker_symbol as path %}
+        <li><a href="{{ path }}">{{ s.ticker_symbol }}</a></li>
+    {% endfor %}
+</ul>

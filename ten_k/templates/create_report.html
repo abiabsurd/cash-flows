@@ -1,0 +1,12 @@
+<!--<form action="/your-name/" method="post">-->
+<title>Create a Report</title>
+<h3>Below, please enter ticker symbols (one per line) for companies whose 10-K filings
+    you would like to compile into a new report.
+</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+</form>
